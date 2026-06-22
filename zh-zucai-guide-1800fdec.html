@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>足彩网 · 稳定入口与页面说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f9f6f0;
+      font-family: 'Segoe UI', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+      color: #2d2a24;
+      line-height: 1.7;
+      padding: 0 1.2rem;
+    }
+
+    .page {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.8rem 0 3.6rem 0;
+    }
+
+    /* hero 区 */
+    .hero {
+      margin-bottom: 3rem;
+      position: relative;
+      padding: 2.2rem 1.8rem;
+      background: #f0ebe1;
+      border-radius: 28px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #1f1c17;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero .sub {
+      font-size: 1.1rem;
+      color: #5b554b;
+      max-width: 60ch;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      background: #d9d0c0;
+      color: #2d2a24;
+      padding: 0.2rem 1rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* 提示框 / 引用块 */
+    .note-box {
+      background: #e7dfd2;
+      padding: 1.5rem 1.8rem;
+      border-radius: 18px;
+      margin: 2.2rem 0;
+      border-left: 6px solid #b3a691;
+      color: #2b2721;
+      font-size: 0.95rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+
+    .note-box strong {
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .note-box a {
+      color: #3e372c;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #b3a691;
+    }
+
+    .note-box a:hover {
+      color: #0f0d0a;
+      text-decoration-color: #0f0d0a;
+    }
+
+    /* 通用标题 */
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin: 2.4rem 0 1rem 0;
+      color: #26221d;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-top: 1.8rem;
+      color: #343027;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    /* 优势 / 说明卡片 */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem;
+      margin: 1.6rem 0;
+    }
+
+    .card {
+      background: #f6f1e9;
+      border-radius: 20px;
+      padding: 1.4rem 1.4rem 1.6rem 1.4rem;
+      border: 1px solid #e6ddcf;
+      transition: background 0.15s;
+    }
+
+    .card:hover {
+      background: #efe8dc;
+    }
+
+    .card .icon {
+      font-size: 1.6rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .card h4 {
+      font-weight: 500;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+      color: #2b2721;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #4f4a40;
+      margin-bottom: 0;
+    }
+
+    .faq-item {
+      margin: 1.3rem 0;
+      padding-left: 0.6rem;
+      border-left: 3px solid #d4cabc;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      color: #2d2a24;
+      margin-bottom: 0.25rem;
+    }
+
+    .faq-a {
+      color: #5b554b;
+      font-size: 0.95rem;
+    }
+
+    .faq-a a {
+      color: #3e372c;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .faq-a a:hover {
+      color: #16130f;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd3c3;
+      margin: 2.6rem 0 1.8rem 0;
+      opacity: 0.5;
+    }
+
+    .bottom-links {
+      font-size: 0.9rem;
+      color: #6b6357;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.8rem;
+      margin-top: 1.6rem;
+    }
+
+    .bottom-links a {
+      color: #3e372c;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #c9beac;
+    }
+
+    .bottom-links a:hover {
+      color: #14110d;
+      text-decoration-color: #14110d;
+    }
+
+    .footer-note {
+      margin-top: 2.8rem;
+      font-size: 0.85rem;
+      color: #8c8273;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .hero {
+        padding: 1.6rem 1.2rem;
+      }
+      .page {
+        padding: 1.6rem 0 2.4rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero 区 -->
+  <div class="hero">
+    <span class="badge">稳定入口 · 信息说明</span>
+    <h1>足彩网 · 内容与访问指引</h1>
+    <div class="sub">
+      一个围绕竞猜信息、数据整理与赛事参考的站点。页面结构清晰，入口稳定，适合需要快速了解基本情况的用户。
+    </div>
+  </div>
+
+  <!-- 一段自然的叙述 -->
+  <p>
+    很多人第一次接触这类网站时，最常问的是：这里提供什么信息，从哪里开始看比较合适。<a href="https://zh-zucai.com">足彩网</a>在设计之初就考虑了这一点——首页即核心入口，不堆砌复杂菜单，而是把主要导航和近期内容放在显眼位置。页面布局偏向阅读型，信息层级克制，没有过度弹窗或分散注意力的广告。
+  </p>
+
+  <!-- 提示框 -->
+  <div class="note-box">
+    <strong>关于进入页面后的第一印象</strong><br>
+    你可能会注意到网站整体配色比较柔和，字体选择偏正文风格。顶部导航区直接列出几个主要板块，下方是当日或当轮的数据摘要。如果你是第一次打开，可以先看看「常见问题」区域——大部分基础疑问都能在那里找到答案。也可以直接使用搜索功能查找特定赛事或队伍。
+  </div>
+
+  <!-- 优势区 -->
+  <h2>页面特点与使用感受</h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="icon">📑</div>
+      <h4>信息结构稳定</h4>
+      <p>导航栏目长期维持一致布局，不会频繁变动。用户养成习惯后可以快速定位到联赛数据、赔率变化或新闻摘要。</p>
+    </div>
+    <div class="card">
+      <div class="icon">🧭</div>
+      <h4>明确的入口位置</h4>
+      <p>从首页到各个子页面都有清晰的返回路径。重要的链接和功能（例如数据表、赛程）通常在相同区域出现。</p>
+    </div>
+    <div class="card">
+      <div class="icon">📊</div>
+      <h4>数据呈现简洁</h4>
+      <p>表格、比例、近期战绩等以模块化卡片展示，减少视觉杂乱。每个数据块通常带有一行简短说明。</p>
+    </div>
+    <div class="card">
+      <div class="icon">🔗</div>
+      <h4>外部参考标注</h4>
+      <p>引用来源或外部链接时，会用不同样式标注，便于区分站内与站外内容，降低信息混淆的可能。</p>
+    </div>
+  </div>
+
+  <!-- 说明区：更详细的角度 -->
+  <h2>从稳定入口到日常使用</h2>
+  <p>
+    对经常浏览足球资讯的人来说，一个稳定的入口比花哨的动效更重要。<a href="https://zh-zucai.com">足彩网</a>的首页信息布局偏向「静态门户」——这不是说它不更新，而是它的框架很少突然变化。比如左侧或顶部的栏目分类，会长期保持相近顺序。用户不需要每次重新适应。
+  </p>
+  <p>
+    如果你习惯先看赛程，再对比数据，最后查看分析摘要，这种流程在站内是顺畅的。每个页面都保留了返回上一级的链接，不会陷入「深层页面找不到出口」的情况。对于需要频繁回查的用户来说，这种设计减少了操作负担。
+  </p>
+
+  <!-- 引用块风格提示 -->
+  <div class="note-box">
+    <strong>一个小建议</strong><br>
+    初次访问时，可以把几个主要栏目都点开一次，大致了解每个页面存放什么类型的信息。之后使用时，你的浏览路径会自然形成。不需要刻意记忆网址结构——通过首页这个稳定入口，就能到达大部分内容。
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <h2>常见疑问摘要</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">—— 首页上的数据多久更新一次？</div>
+    <div class="faq-a">赛事进行期间，关键数据（比分、红黄牌、实时统计）通常会在几分钟内刷新。非赛时段的赔率或历史数据每日更新。具体更新频率可以在对应页面底部找到说明。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">—— 是否所有内容都能免费浏览？</div>
+    <div class="faq-a">大部分基础数据和新闻摘要不设限制。部分深度分析或历史对比功能可能需要登录，但注册流程比较简单，只需邮箱和用户名。<a href="https://zh-zucai.com">足彩网</a>上没有强制付费才能阅读的核心内容。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">—— 移动设备上浏览体验如何？</div>
+    <div class="faq-a">页面采用响应式布局，在手机浏览器上会重新排列卡片和表格，文字大小也会适当调整。横屏时能看到更多数据列。整体来说，移动端的核心功能与桌面端一致。</div>
+  </div>
+
+  <hr>
+
+  <!-- 底部链接 -->
+  <div class="bottom-links">
+    <span>相关页面：</span>
+    <a href="https://zh-zucai.com">足彩网</a>
+    <a href="#">赛程概况</a>
+    <a href="#">数据对比</a>
+    <a href="#">规则说明</a>
+    <a href="#">联系反馈</a>
+  </div>
+
+  <div class="footer-note">
+    本页面仅为介绍说明，所有信息以网站实际内容为准。建议直接访问 <a href="https://zh-zucai.com" style="text-decoration: underline; text-underline-offset: 3px;">足彩网</a> 查看最新信息。
+  </div>
+
+</div>
+</body>
+</html>
